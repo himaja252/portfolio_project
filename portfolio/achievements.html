@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Achievements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #3793ac;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            font-size: 1.2em;
+        }
+
+        ol {
+            margin: 20px auto;
+            padding: 0;
+            max-width: 600px;
+            list-style-position: inside;
+        }
+
+        li {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid#3793ac;
+            font-size: 1.2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .next-page-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .next-page-button a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #3793ac;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .next-page-button a:hover {
+            background-color: #2a6f81;
+            transform: scale(1.05);
+        }
+
+        .next-page-button a::after {
+            content: '→';
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>ACHIEVEMENTS</h2>
+    </div>
+    <ol type="1">
+        <li>Received Best performing ISTE chapter student award,2024.</li>
+        <li>Won 1st prize in Ideathon at the 19th ISTE Karnataka State level student convention at P.E.S college of engineering, Mandya.</li>
+        <li>Won 2nd prize in Technical Quiz competition in the 18th Karnataka State level ISTE student convention at Vemana IT.</li>
+        <li>Successfully completed the offline workshop on Data Science conducted by EduFabrica in association with Pravega,IISc Bangalore</li>
+        <li>Silver Badge in NPTEL - Python for Data Science</li>
+        <li>Gold badge for Python in HackerRank</li>
+        <li>Secured first place in Painting competition organized in CIT- Flair 2023</li>
+    </ol>
+    <div class="next-page-button">
+        <a href="contact.html">Go to Contacts</a>
+    </div>
+</body>
+</html>

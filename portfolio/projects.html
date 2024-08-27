@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #3793ac;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        ol {
+            margin: 20px auto;
+            padding: 0;
+            max-width: 600px;
+            list-style-position: inside;
+        }
+
+        li {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #3793ac;
+            font-size: 1.2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-description {
+            display: none;
+            margin: 10px 0 20px 20px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            font-size: 1em;
+            line-height: 1.4;
+        }
+
+        .next-page-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .next-page-button a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #3793ac;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .next-page-button a:hover {
+            background-color: #2a6f81;
+            transform: scale(1.05);
+        }
+
+        .next-page-button a::after {
+            content: '→';
+            margin-left: 10px;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projects = document.querySelectorAll('li');
+            projects.forEach(project => {
+                project.addEventListener('click', function() {
+                    const description = this.querySelector('.project-description');
+                    description.style.display = description.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h2>PROJECTS</h2>
+    </div>
+    <div class="content">
+        <p>Here are some of my projects:</p>
+        <ol type="1">
+            <li>
+                Student Achievement Management System
+                <div class="project-description">
+                    Implemented a web application capable of storing and showcasing all the extra curricular achievements of the students in the field of sports, cultural activities, technical activities along with course category. In this course category, students can showcase the additional courses taken from various platforms like Udemy, Coursera and NPTEL. 
+                </div>
+            </li>
+            <li>
+                Medicinal and Toxic Plant Classification System
+                <div class="project-description">
+                    Developed a plant classification system utilizing MobileNetV2, achieving high accuracy in distinguishing between medicinal and toxic plants. Implemented a web application that classifies plants and provides detailed information about their properties. For medicinal plants, the application specifies how they can be used medicinally. For toxic plants, it identifies which parts are toxic and offers guidelines on treatment for toxicity.
+                </div>
+            </li>
+            <li>
+                Mixed Dog Breed Identification System
+                <div class="project-description">
+                    The Mixed Dog Breed Identification System is a machine learning project that aims to identify mixed dog breeds from photos. This system leverages the power of the InceptionV3 model, a convolutional neural network (CNN) that is widely used for image classification tasks. By analyzing the visual characteristics of a dog in a given photo, the system can predict the breeds present in the dog's lineage. This project provides a valuable tool for pet owners, veterinarians, and animal shelters to understand the genetic makeup of mixed-breed dogs, which can be useful for health, training, and adoption purposes. The use of InceptionV3 ensures high accuracy and reliability in breed identification.
+                </div>
+            </li>
+        </ol>
+        <p>* click on the title for description</p>
+        <div class="next-page-button">
+            <a href="achievements.html">Go to Achievements</a>
+        </div>
+    </div>
+</body>
+</html>
